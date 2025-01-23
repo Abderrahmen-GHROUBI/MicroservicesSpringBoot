@@ -14,11 +14,24 @@ spring:
     url: jdbc:postgresql://localhost:5432/schools
     username: postgres
     password: root
+    initialize: true
   jpa:
     hibernate:
-      ddl-auto: create
+      ddl-auto: update
     database: postgresql
     database-platform: org.hibernate.dialect.PostgreSQLDialect
 application:
   config:
     students-url: http://localhost:8090/api/v1/students
+management:
+  tracing:
+    sampling:
+      probability: 1.0
+    enabled: true
+  zipkin:
+    tracing:
+      endpoint: http://localhost:9411/api/v2/spans
+  endpoints:
+    web:
+      exposure:
+        include: health,metrics,prometheus
