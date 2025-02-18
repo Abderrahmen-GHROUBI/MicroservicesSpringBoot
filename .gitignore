@@ -1,0 +1,23 @@
+# Fichiers générés par IntelliJ IDEA
+.idea/
+*.iml
+
+# Dossier des dépendances de Spring Boot
+/target/
+/out/
+
+# Fichiers de logs
+*.log
+
+
+
+# Fichiers compilés Java
+*.class
+*.jar
+*.war
+
+# Fichiers de build de Docker
+Dockerfile*
+
+# Fichiers de configuration des outils
+.env
